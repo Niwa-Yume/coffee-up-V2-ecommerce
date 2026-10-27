@@ -1,0 +1,162 @@
+/*
+ * Coffee Up design tokens (see CLAUDE.md > Design tokens).
+ * Brand colors come from settings.color_palette, aliased in snippets/color-palette.liquid.
+ */
+
+/* Color schemes: add a .coffee-scheme--* class to a section or block wrapper */
+
+:root {
+  --color-primary-button-hover-background: var(--color-bordeaux-deep);
+  --color-primary-button-hover-border: var(--color-bordeaux-deep);
+  --color-primary-button-hover-text: var(--color-cream);
+}
+
+.coffee-scheme--cream {
+  --scheme-bg: var(--color-cream);
+  --scheme-bg-rgb: var(--color-cream-rgb);
+  --scheme-fg: var(--color-ink);
+  --scheme-fg-rgb: var(--color-ink-rgb);
+  --scheme-button-bg: var(--color-bordeaux);
+  --scheme-button-text: var(--color-cream);
+  --scheme-button-hover-bg: var(--color-bordeaux-deep);
+  --scheme-button-hover-text: var(--color-cream);
+  --scheme-button-hover-border: var(--color-bordeaux-deep);
+}
+
+/* Dark schemes invert the button on hover */
+.coffee-scheme--bordeaux {
+  --scheme-bg: var(--color-bordeaux);
+  --scheme-bg-rgb: var(--color-bordeaux-rgb);
+  --scheme-fg: var(--color-sand);
+  --scheme-fg-rgb: var(--color-sand-rgb);
+  --scheme-button-bg: var(--color-cream);
+  --scheme-button-text: var(--color-bordeaux);
+  --scheme-button-hover-bg: var(--color-bordeaux);
+  --scheme-button-hover-text: var(--color-cream);
+  --scheme-button-hover-border: var(--color-cream);
+}
+
+.coffee-scheme--sand {
+  --scheme-bg: var(--color-sand);
+  --scheme-bg-rgb: var(--color-sand-rgb);
+  --scheme-fg: var(--color-ink);
+  --scheme-fg-rgb: var(--color-ink-rgb);
+  --scheme-button-bg: var(--color-bordeaux);
+  --scheme-button-text: var(--color-cream);
+  --scheme-button-hover-bg: var(--color-bordeaux-deep);
+  --scheme-button-hover-text: var(--color-cream);
+  --scheme-button-hover-border: var(--color-bordeaux-deep);
+}
+
+.coffee-scheme--deep {
+  --scheme-bg: var(--color-bordeaux-deep);
+  --scheme-bg-rgb: var(--color-bordeaux-deep-rgb);
+  --scheme-fg: var(--color-sand);
+  --scheme-fg-rgb: var(--color-sand-rgb);
+  --scheme-button-bg: var(--color-sand);
+  --scheme-button-text: var(--color-bordeaux-deep);
+  --scheme-button-hover-bg: var(--color-bordeaux-deep);
+  --scheme-button-hover-text: var(--color-sand);
+  --scheme-button-hover-border: var(--color-sand);
+}
+
+/* Dark backgrounds: same opacity bumps as snippets/brightness-opacities.liquid */
+.coffee-scheme--bordeaux,
+.coffee-scheme--deep {
+  --opacity-5-15: 0.15;
+  --opacity-10-25: 0.25;
+  --opacity-35-55: 0.55;
+  --opacity-40-60: 0.6;
+  --opacity-30-60: 0.6;
+}
+
+:is(.coffee-scheme--cream, .coffee-scheme--bordeaux, .coffee-scheme--sand, .coffee-scheme--deep) {
+  --color-background: var(--scheme-bg);
+  --color-background-rgb: var(--scheme-bg-rgb);
+  --color: var(--scheme-fg);
+  --color-rgb: var(--scheme-fg-rgb);
+  --color-foreground: var(--scheme-fg);
+  --color-foreground-rgb: var(--scheme-fg-rgb);
+  --color-foreground-muted: rgb(var(--scheme-fg-rgb) / var(--opacity-muted-text));
+  --color-foreground-subdued: rgb(var(--scheme-fg-rgb) / var(--opacity-subdued-text));
+  --color-border: var(--scheme-fg);
+  --color-border-rgb: var(--scheme-fg-rgb);
+
+  --color-primary-button-background: var(--scheme-button-bg);
+  --color-primary-button-border: var(--scheme-button-bg);
+  --color-primary-button-text: var(--scheme-button-text);
+  --color-primary-button-focus-outline: var(--scheme-fg);
+  --color-primary-button-hover-background: var(--scheme-button-hover-bg);
+  --color-primary-button-hover-border: var(--scheme-button-hover-border);
+  --color-primary-button-hover-text: var(--scheme-button-hover-text);
+
+  --color-secondary-button-background: transparent;
+  --color-secondary-button-border: var(--scheme-fg);
+  --color-secondary-button-text: var(--scheme-fg);
+  --color-secondary-button-hover-background: var(--scheme-fg);
+  --color-secondary-button-hover-border: var(--scheme-fg);
+  --color-secondary-button-hover-text: var(--scheme-bg);
+
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+/* Typography (paragraph and h1–h6 sizes and fonts live in theme settings) */
+
+:root {
+  --font-size-display: clamp(3rem, 8vw, 8rem);
+  --line-height-display: 0.95;
+  --letter-spacing-display: -0.02em;
+
+  --font-size-label: 0.75rem;
+  --letter-spacing-label: 0.08em;
+  --letter-spacing-wide: 0.6em;
+  --font-h6--letter-spacing: var(--letter-spacing-label);
+}
+
+/* Spacing, grid, radii */
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  --space-9: 128px;
+
+  --section-padding-block: clamp(var(--space-7), 8vw, var(--space-9));
+  --page-margin-mobile: var(--space-3);
+
+  --grid-columns: 12;
+  --grid-gutter: var(--space-4);
+
+  --product-media-inset: 12%;
+
+  --radius-section: 24px;
+  --radius-pill: 999px;
+}
+
+/* Motion */
+
+:root {
+  --reveal-distance: 20px;
+  --reveal-duration: 500ms;
+  --reveal-easing: cubic-bezier(0.16, 1, 0.3, 1);
+  --reveal-stagger: 100ms;
+  --hover-duration: 200ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -89,6 +89,8 @@
     "show_submenu": "Rodyti {{ title }} submeniu"
   },
   "actions": {
+    "pause": "Pristabdyti",
+    "play": "Leisti",
     "add_to_cart": "Įdėti į krepšelį",
     "clear_all": "Išvalyti viską",
     "remove": "Pašalinti",
@@ -159,6 +161,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Mokesčiai, nuolaidos ir siuntimo išlaidos apskaičiuojamos atsiskaitant.",
     "checkout": "Atsiskaityti",
     "cart_title": "Krepšelis",
+    "geneva": "Ženeva",
     "price": "Kaina",
     "price_regular": "Įprasta kaina",
     "price_compare_at": "Kainų palyginimas",

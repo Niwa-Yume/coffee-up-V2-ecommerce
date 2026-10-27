@@ -69,6 +69,8 @@
     }
   },
   "actions": {
+    "pause": "השהיה",
+    "play": "הפעלה",
     "add": "הוספה",
     "add_to_cart": "הוספה לסל",
     "added": "נוסף",
@@ -166,6 +168,7 @@
     "blog_details_separator": "|",
     "cart_estimated_total": "סכום כולל משוער",
     "cart_title": "סל",
+    "geneva": "ז׳נבה",
     "cart_subtotal": "סכום ביניים",
     "cart_total": "סך הכול לסל",
     "checkout": "לסיים תשלום",

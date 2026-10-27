@@ -1,0 +1,50 @@
+{% doc %}
+  Renders a live clock set to Geneva time, shown in the header actions.
+  The server renders a placeholder: the time is only set client-side so cached pages never show a stale value.
+
+  @example
+  {% render 'coffee-clock' %}
+{% enddoc %}
+
+<coffee-clock class="coffee-clock header-actions__text-style mobile:hidden">
+  {{ 'content.geneva' | t }}
+  <time>--:--:--</time>
+</coffee-clock>
+
+{% stylesheet %}
+  .coffee-clock {
+    display: inline-flex;
+    gap: var(--space-2);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  class CoffeeClock extends HTMLElement {
+    #interval;
+
+    connectedCallback() {
+      const time = this.querySelector('time');
+      const format = new Intl.DateTimeFormat('fr-CH', {
+        timeZone: 'Europe/Zurich',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+      });
+      const tick = () => {
+        time.textContent = format.format(new Date());
+      };
+
+      tick();
+      this.#interval = setInterval(tick, 1000);
+    }
+
+    disconnectedCallback() {
+      clearInterval(this.#interval);
+    }
+  }
+
+  if (!customElements.get('coffee-clock')) customElements.define('coffee-clock', CoffeeClock);
+{% endjavascript %}

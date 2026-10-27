@@ -87,6 +87,8 @@
     "show_submenu": "แสดงเมนูย่อยของ{{ title }}"
   },
   "actions": {
+    "pause": "หยุดชั่วคราว",
+    "play": "เล่น",
     "add_to_cart": "เพิ่มลงในตะกร้าสินค้า",
     "clear_all": "ล้างทั้งหมด",
     "remove": "ลบออก",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "ระบบจะคำนวณภาษี ส่วนลด และค่าจัดส่งในขั้นตอนการชำระเงิน",
     "checkout": "ชำระเงิน",
     "cart_title": "ตะกร้าสินค้า",
+    "geneva": "เจนีวา",
     "price": "ราคา",
     "price_regular": "ราคาปกติ",
     "price_compare_at": "ราคาเปรียบเทียบ",

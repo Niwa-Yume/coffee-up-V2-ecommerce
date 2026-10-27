@@ -42,6 +42,16 @@
       </div>
     </div>
   </div>
+  <button
+    type="button"
+    class="button-unstyled marquee__pause"
+    ref="pauseButton"
+    on:click="/togglePause"
+    data-label-pause="{{ 'actions.pause' | t }}"
+    data-label-play="{{ 'actions.play' | t }}"
+  >
+    {{- 'actions.pause' | t -}}
+  </button>
 </marquee-component>
 
 {% stylesheet %}
@@ -87,6 +97,31 @@
   @media (prefers-reduced-motion: no-preference) {
     marquee-component:not([data-disabled]) .marquee__wrapper {
       animation: marquee-motion var(--marquee-speed) linear infinite var(--marquee-direction);
+    }
+  }
+
+  marquee-component[data-paused] .marquee__wrapper {
+    animation-play-state: paused;
+  }
+
+  /* Lets keyboard and touch users stop the motion (WCAG 2.2.2) */
+  .marquee__pause {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-end: 0;
+    z-index: 1;
+    padding-inline: var(--padding-lg);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body--family);
+    font-size: var(--font-size-label);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__pause {
+      display: none;
     }
   }
 

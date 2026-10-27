@@ -89,6 +89,8 @@
     "show_submenu": "Показать подменю {{ title }}"
   },
   "actions": {
+    "pause": "Пауза",
+    "play": "Воспроизвести",
     "add_to_cart": "Добавить в корзину",
     "clear_all": "Очистить всё",
     "remove": "Удалить",
@@ -159,6 +161,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Налоги, скидки и стоимость доставки рассчитываются при оформлении заказа.",
     "checkout": "Оформить заказ",
     "cart_title": "Корзина",
+    "geneva": "Женева",
     "price": "Цена",
     "price_regular": "Обычная цена",
     "price_compare_at": "Сравнить по цене",

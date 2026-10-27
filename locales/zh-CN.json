@@ -87,6 +87,8 @@
     "show_submenu": "显示 {{ title }} 子菜单"
   },
   "actions": {
+    "pause": "暂停",
+    "play": "播放",
     "add_to_cart": "添加到购物车",
     "clear_all": "全部清除",
     "remove": "移除",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "结账时计算税费、折扣和运费。",
     "checkout": "结账",
     "cart_title": "购物车",
+    "geneva": "日内瓦",
     "price": "价格",
     "price_regular": "常规价格",
     "price_compare_at": "原价",

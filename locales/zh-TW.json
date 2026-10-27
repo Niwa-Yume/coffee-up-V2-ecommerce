@@ -87,6 +87,8 @@
     "show_submenu": "顯示 {{ title }} 子選單"
   },
   "actions": {
+    "pause": "暫停",
+    "play": "播放",
     "add_to_cart": "加入購物車",
     "clear_all": "全部清除",
     "remove": "移除",
@@ -151,6 +153,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "結帳時計算稅額、折扣和運費。",
     "checkout": "結帳",
     "cart_title": "購物車",
+    "geneva": "日內瓦",
     "product_image": "產品圖片",
     "product_information": "產品資訊",
     "product_total": "商品總數",

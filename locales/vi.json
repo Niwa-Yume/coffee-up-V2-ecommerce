@@ -87,6 +87,8 @@
     "show_submenu": "Hiển thị menu phụ {{ title }}"
   },
   "actions": {
+    "pause": "Tạm dừng",
+    "play": "Phát",
     "add_to_cart": "Thêm vào giỏ hàng",
     "clear_all": "Xóa tất cả",
     "remove": "Xóa",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Thuế, ưu đãi giảm giá và phí vận chuyển được tính khi thanh toán.",
     "checkout": "Thanh toán",
     "cart_title": "Giỏ hàng",
+    "geneva": "Genève",
     "price": "Giá",
     "price_regular": "Giá thông thường",
     "price_compare_at": "Giá gốc",

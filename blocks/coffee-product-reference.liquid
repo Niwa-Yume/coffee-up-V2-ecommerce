@@ -1,0 +1,84 @@
+{% doc %}
+  Renders a product card's reference code (watch-reference style), then its origin and price.
+  The reference falls back to the first variant SKU, then to the product title.
+  On hover-capable devices the second line is revealed on hover or keyboard focus.
+{% enddoc %}
+
+{%- liquid
+  assign product_resource = closest.product
+  assign reference = product_resource.metafields.custom.reference.value
+  assign reference = reference | default: product_resource.selected_or_first_available_variant.sku | default: product_resource.title
+  assign origin = product_resource.metafields.custom.origin.value
+-%}
+
+<div
+  class="coffee-ref"
+  {{ block.shopify_attributes }}
+>
+  <p class="coffee-ref__code">
+    {{- reference | escape -}}
+    {%- if reference != product_resource.title -%}
+      <span class="visually-hidden"> — {{ product_resource.title | escape }}</span>
+    {%- endif -%}
+  </p>
+  <div class="coffee-ref__meta">
+    {%- if origin != blank -%}
+      <span>{{ origin | escape }}</span>
+      <span aria-hidden="true">·</span>
+    {%- endif -%}
+    {% render 'price', product_resource: product_resource %}
+  </div>
+</div>
+
+{% stylesheet %}
+  .coffee-ref {
+    display: grid;
+    gap: var(--space-1);
+    padding-block-start: var(--space-3);
+    font-family: var(--font-body--family);
+    font-size: var(--font-size-label);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .coffee-ref__code {
+    margin: 0;
+  }
+
+  .coffee-ref__meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+
+    > * {
+      font-size: inherit;
+    }
+  }
+
+  @media (hover: hover) {
+    .coffee-ref__meta {
+      opacity: 0;
+      transition: opacity var(--hover-duration);
+    }
+
+    .product-card:is(:hover, :focus-within) .coffee-ref__meta {
+      opacity: 1;
+    }
+  }
+
+  /* Yeezy-like media: small centered product, white backgrounds melt into the cream */
+  .product-card:has(.coffee-ref) .card-gallery .media-fit img {
+    object-fit: contain;
+    padding: var(--product-media-inset);
+    mix-blend-mode: multiply;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Coffee référence",
+  "tag": null
+}
+{% endschema %}

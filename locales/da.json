@@ -87,6 +87,8 @@
     "show_submenu": "Vis undermenu for {{ title }}"
   },
   "actions": {
+    "pause": "Pause",
+    "play": "Afspil",
     "add_to_cart": "Læg i indkøbskurven",
     "clear_all": "Ryd alle",
     "remove": "Fjern",
@@ -151,6 +153,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Skatter, rabatter og levering beregnes ved betaling.",
     "checkout": "Gå til betaling",
     "cart_title": "Indkøbskurv",
+    "geneva": "Genève",
     "product_image": "Produktbillede",
     "product_information": "Produktoplysninger",
     "product_total": "Produkt i alt",

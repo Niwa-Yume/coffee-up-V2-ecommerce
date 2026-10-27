@@ -88,6 +88,8 @@
     "show_submenu": "Prikaži podizbornik {{ title }}"
   },
   "actions": {
+    "pause": "Pauza",
+    "play": "Reproduciraj",
     "add_to_cart": "Dodaj u košaricu",
     "clear_all": "Očisti sve",
     "remove": "Ukloni",
@@ -161,6 +163,7 @@
     "price_sale": "Prodajna cijena",
     "checkout": "Plaćanje",
     "cart_title": "Košarica",
+    "geneva": "Ženeva",
     "duties_and_taxes_included": "Carina i porezi su uključeni.",
     "duties_included": "Carina je uključena.",
     "shipping_policy_html": "<a href=\"{{ link }}\">Poštarina</a> se obračunava prilikom plaćanja.",

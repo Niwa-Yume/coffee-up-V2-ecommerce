@@ -1242,6 +1242,11 @@
     font-family: var(--menu-localization-font);
     font-size: var(--menu-localization-font-size);
   }
+
+  /* Coffee Up: label tracking on the mono navigation and actions */
+  #header-component :is(.menu-list__link, .header-actions__text-style) {
+    letter-spacing: var(--letter-spacing-label);
+  }
 {% endstylesheet %}
 
 {% unless request.design_mode %}

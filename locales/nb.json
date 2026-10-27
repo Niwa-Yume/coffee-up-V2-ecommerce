@@ -87,6 +87,8 @@
     "view_disclosure_information_for_product": "Se produktopplysninger for {{ product_title }}"
   },
   "actions": {
+    "pause": "Pause",
+    "play": "Spill av",
     "add_to_cart": "Legg i handlekurv",
     "clear_all": "Fjern alle",
     "remove": "Fjern",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Avgifter, rabatter og frakt beregnes i kassen.",
     "checkout": "Betaling",
     "cart_title": "Handlekurv",
+    "geneva": "Genève",
     "price": "Pris",
     "price_regular": "Vanlig pris",
     "price_compare_at": "Sammenligningspris",

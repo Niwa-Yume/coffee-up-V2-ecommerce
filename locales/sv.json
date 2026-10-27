@@ -87,6 +87,8 @@
     "view_disclosure_information_for_product": "Visa produktupplysningar för {{ product_title }}"
   },
   "actions": {
+    "pause": "Pausa",
+    "play": "Spela",
     "add_to_cart": "Lägg till i varukorgen",
     "clear_all": "Rensa alla",
     "remove": "Ta bort",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Skatter, rabatter och fraktkostnad beräknas i kassan.",
     "checkout": "Betala",
     "cart_title": "Varukorg",
+    "geneva": "Genève",
     "price": "Pris",
     "price_regular": "Ordinarie pris",
     "price_compare_at": "Jämförpris",

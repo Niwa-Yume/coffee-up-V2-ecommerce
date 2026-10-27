@@ -87,6 +87,8 @@
     "show_submenu": "{{ title }} almenü megjelenítése"
   },
   "actions": {
+    "pause": "Szünet",
+    "play": "Lejátszás",
     "add_to_cart": "Hozzáadás a kosárhoz",
     "clear_all": "Összes törlése",
     "remove": "Eltávolítás",
@@ -154,6 +156,7 @@
     "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Az adók, a kedvezmények és a <a href=\"{{ link }}\">szállítási költség</a> kiszámítása a pénztárban történik..",
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Az adók, a kedvezmények és a szállítási költség kiszámítása a pénztárban történik.",
     "cart_title": "Kosár",
+    "geneva": "Genf",
     "price": "Ár",
     "price_regular": "Normál ár",
     "price_compare_at": "Összehasonlítás ár alapján",
