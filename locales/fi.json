@@ -87,6 +87,8 @@
     "show_submenu": "Näytä kohteen {{ title }} alivalikko"
   },
   "actions": {
+    "pause": "Tauko",
+    "play": "Toista",
     "add_to_cart": "Lisää ostoskoriin",
     "clear_all": "Tyhjennä kaikki",
     "remove": "Poista",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Verot, alennukset ja toimituskulut lasketaan kassalla.",
     "checkout": "Maksa kassalla",
     "cart_title": "Ostoskori",
+    "geneva": "Geneve",
     "price": "Hinta",
     "price_regular": "Normaalihinta",
     "price_compare_at": "Vertailuhinta",

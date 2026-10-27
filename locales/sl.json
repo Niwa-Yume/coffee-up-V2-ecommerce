@@ -89,6 +89,8 @@
     "show_submenu": "Prikaži podmeni {{ title }}"
   },
   "actions": {
+    "pause": "Premor",
+    "play": "Predvajaj",
     "add_to_cart": "Dodaj v košarico",
     "clear_all": "Počisti vse",
     "remove": "Odstrani",
@@ -159,6 +161,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Davki, popusti in strošek dostave se obračunajo ob zaključku nakupa.",
     "checkout": "Zaključi nakup",
     "cart_title": "Košarica",
+    "geneva": "Ženeva",
     "price": "Cena",
     "price_regular": "Redna cena",
     "price_compare_at": "Primerjava cene",

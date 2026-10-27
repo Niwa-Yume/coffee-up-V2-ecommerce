@@ -89,6 +89,8 @@
     "show_submenu": "Pokaż podmenu {{ title }}"
   },
   "actions": {
+    "pause": "Wstrzymaj",
+    "play": "Odtwórz",
     "add_to_cart": "Dodaj do koszyka",
     "clear_all": "Wyczyść wszystko",
     "remove": "Usuń",
@@ -159,6 +161,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Obliczenie podatków, rabatów i wysyłki przy realizacji zakupu.",
     "checkout": "Zrealizuj zakup",
     "cart_title": "Koszyk",
+    "geneva": "Genewa",
     "price": "Cena",
     "price_regular": "Cena regularna",
     "price_compare_at": "Cena do porównania",

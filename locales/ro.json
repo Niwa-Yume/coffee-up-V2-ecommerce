@@ -88,6 +88,8 @@
     "view_disclosure_information_for_product": "Vizualizează mențiunile referitoare la produsul {{ product_title }}"
   },
   "actions": {
+    "pause": "Pauză",
+    "play": "Redare",
     "add_to_cart": "Adaugă în coș",
     "clear_all": "Ștergeți tot",
     "remove": "Eliminați",
@@ -157,6 +159,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxele, reducerile și transportul sunt calculate la finalizarea comenzii.",
     "checkout": "Finalizează comanda",
     "cart_title": "Coș",
+    "geneva": "Geneva",
     "price": "Preț",
     "price_regular": "Preț obișnuit",
     "price_compare_at": "Compararea prețurilor",

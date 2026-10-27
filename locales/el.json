@@ -87,6 +87,8 @@
     "show_submenu": "Εμφάνιση υπομενού {{ title }}"
   },
   "actions": {
+    "pause": "Παύση",
+    "play": "Αναπαραγωγή",
     "add_to_cart": "Προσθήκη στο καλάθι",
     "clear_all": "Εκκαθάριση όλων",
     "remove": "Αφαίρεση",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Οι φόροι, οι εκπτώσεις και τα έξοδα αποστολής υπολογίζονται κατά την ολοκλήρωση της αγοράς.",
     "checkout": "Ολοκλήρωση αγοράς",
     "cart_title": "Καλάθι",
+    "geneva": "Γενεύη",
     "price": "Τιμή",
     "price_regular": "Κανονική τιμή",
     "price_compare_at": "Σύγκριση σε τιμή",

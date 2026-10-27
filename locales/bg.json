@@ -87,6 +87,8 @@
     "show_submenu": "Показване на подменю {{ title }}"
   },
   "actions": {
+    "pause": "Пауза",
+    "play": "Пусни",
     "add_to_cart": "Добавяне към количката",
     "clear_all": "Изчисти всички",
     "remove": "Премахни",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Данъците, отстъпките и доставката се изчисляват при плащане.",
     "checkout": "Преминаване към плащане",
     "cart_title": "Количка",
+    "geneva": "Женева",
     "price": "Цена",
     "price_regular": "Обичайна цена",
     "price_compare_at": "Сравнение на цени",

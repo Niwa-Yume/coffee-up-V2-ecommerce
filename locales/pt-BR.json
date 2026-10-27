@@ -88,6 +88,8 @@
     "show_submenu": "Mostrar submenu de {{ title }}"
   },
   "actions": {
+    "pause": "Pausar",
+    "play": "Reproduzir",
     "add_to_cart": "Adicionar ao carrinho",
     "clear_all": "Limpar tudo",
     "remove": "Remover",
@@ -153,6 +155,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Tributos, descontos e frete calculados no checkout.",
     "checkout": "Finalizar a compra",
     "cart_title": "Cart",
+    "geneva": "Genebra",
     "product_image": "Imagem do produto",
     "product_information": "Informações do produto",
     "product_total": "Total de produtos",

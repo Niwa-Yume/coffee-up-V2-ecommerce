@@ -87,6 +87,8 @@
     "show_submenu": "Untermenü {{ title }} anzeigen"
   },
   "actions": {
+    "pause": "Pause",
+    "play": "Wiedergabe",
     "add_to_cart": "In den Warenkorb legen",
     "clear_all": "Alle löschen",
     "remove": "Entfernen",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Steuern, Rabatte und Versand werden beim Checkout berechnet.",
     "checkout": "Auschecken",
     "cart_title": "Warenkorb",
+    "geneva": "Genf",
     "price": "Preis",
     "price_regular": "Normaler Preis",
     "price_compare_at": "Vergleichspreis",

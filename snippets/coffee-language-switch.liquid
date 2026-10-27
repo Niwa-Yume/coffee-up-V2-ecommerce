@@ -1,0 +1,53 @@
+{% doc %}
+  Renders an inline language switch (FR / EN) as a native localization form, without JavaScript.
+  Outputs nothing while the shop has a single published language.
+
+  @example
+  {% render 'coffee-language-switch' %}
+{% enddoc %}
+
+{%- if localization.available_languages.size > 1 -%}
+  {%- form 'localization', class: 'coffee-language-switch' -%}
+    <span class="visually-hidden">{{ 'content.language' | t }}</span>
+    {%- for language in localization.available_languages -%}
+      {%- unless forloop.first -%}
+        <span aria-hidden="true">/</span>
+      {%- endunless -%}
+      <button
+        type="submit"
+        name="language_code"
+        value="{{ language.iso_code }}"
+        class="button-unstyled coffee-language-switch__option"
+        lang="{{ language.iso_code }}"
+        aria-label="{{ language.endonym_name | capitalize }}"
+        {% if language.iso_code == localization.language.iso_code %}
+          aria-current="true"
+        {% endif %}
+      >
+        {{- language.iso_code | upcase -}}
+      </button>
+    {%- endfor -%}
+  {%- endform -%}
+{%- endif -%}
+
+{% stylesheet %}
+  .coffee-language-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--font-size-label);
+    letter-spacing: var(--letter-spacing-label);
+  }
+
+  .coffee-language-switch__option {
+    min-height: var(--minimum-touch-target);
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-underline-offset: 0.3em;
+
+    &[aria-current] {
+      text-decoration: underline;
+    }
+  }
+{% endstylesheet %}

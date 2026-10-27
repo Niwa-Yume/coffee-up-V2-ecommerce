@@ -87,6 +87,8 @@
     "view_disclosure_information_for_product": "{{ product_title }} için bildirim bilgilerini görüntüleyin"
   },
   "actions": {
+    "pause": "Duraklat",
+    "play": "Oynat",
     "add_to_cart": "Sepete ekle",
     "clear_all": "Tümünü temizle",
     "remove": "Kaldır",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Ödeme sayfasında hesaplanan vergiler, indirimler ve kargo.",
     "checkout": "Ödeme",
     "cart_title": "Sepet",
+    "geneva": "Cenevre",
     "price": "Fiyat",
     "price_regular": "Normal fiyat",
     "price_compare_at": "Karşılaştırma fiyatı",

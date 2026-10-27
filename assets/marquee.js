@@ -12,6 +12,7 @@ const ANIMATION_OPTIONS = {
  * @property {HTMLElement} wrapper - The wrapper element.
  * @property {HTMLElement} content - The content element.
  * @property {HTMLElement[]} marqueeItems - The marquee items collection.
+ * @property {HTMLButtonElement} [pauseButton] - The button that pauses and resumes the motion.
  *
  * @extends Component<Refs>
  */
@@ -94,6 +95,14 @@ class MarqueeComponent extends Component {
     });
   }
 
+  togglePause() {
+    const { pauseButton } = this.refs;
+    if (!pauseButton) return;
+
+    const paused = this.toggleAttribute('data-paused');
+    pauseButton.textContent = (paused ? pauseButton.dataset.labelPlay : pauseButton.dataset.labelPause) ?? '';
+  }
+
   get clonedContent() {
     const { content, wrapper } = this.refs;
     const lastChild = wrapper.lastElementChild;
@@ -154,7 +163,7 @@ class MarqueeComponent extends Component {
 
   #handleResize = debounce(async () => {
     const { marqueeItems } = this.refs;
-    const { newNumberOfCopies, isHorizontalResize } = await this.#queryNumberOfCopies();
+    const { numberOfCopies: newNumberOfCopies, isHorizontalResize } = await this.#queryNumberOfCopies();
 
     // opt out of marquee manipulation on vertical resizes
     if (!isHorizontalResize) return;
@@ -203,7 +212,8 @@ class MarqueeComponent extends Component {
     if (!marqueeItems[0]) return;
 
     for (let i = 0; i < numberOfCopies - 1; i++) {
-      const clone = marqueeItems[0].cloneNode(true);
+      const clone = /** @type {HTMLElement} */ (marqueeItems[0].cloneNode(true));
+      clone.setAttribute('aria-hidden', 'true');
       content.appendChild(clone);
     }
   }

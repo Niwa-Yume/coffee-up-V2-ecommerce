@@ -63,6 +63,9 @@
   {% endif %}
   {{- block.shopify_attributes -}}
 >
+  {% render 'coffee-clock' %}
+  {% render 'coffee-language-switch' %}
+
   {% if shop.customer_accounts_enabled %}
     {% liquid
       assign account_actions_style = ''

@@ -88,6 +88,8 @@
     "show_submenu": "Mostrar submenú de {{ title }}"
   },
   "actions": {
+    "pause": "Pausa",
+    "play": "Reproducir",
     "add_to_cart": "Agregar al carrito",
     "clear_all": "Borrar todo",
     "remove": "Eliminar",
@@ -157,6 +159,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Impuestos, descuentos y envío calculados en la página de pago.",
     "checkout": "Pagar",
     "cart_title": "Carrito",
+    "geneva": "Ginebra",
     "price": "Precio",
     "price_regular": "Precio habitual",
     "price_compare_at": "Precio de comparación",

@@ -66,7 +66,7 @@
       on:click="/toggle"
     >
       <span class="svg-wrapper header-drawer-icon header-drawer-icon--open">
-        {{- 'icon-menu.svg' | inline_asset_content -}}
+        {{- 'icon-plus.svg' | inline_asset_content -}}
       </span>
       <span class="svg-wrapper header-drawer-icon header-drawer-icon--close">
         {{- 'icon-close-menu.svg' | inline_asset_content -}}
@@ -1538,5 +1538,20 @@
 
   .drawer-localization .language-selector .svg-wrapper.icon-caret svg {
     transform: none;
+  }
+
+  /* Coffee Up: full-screen drawer, editorial links in the display font */
+  .menu-drawer {
+    --drawer-width: 100vw;
+    --drawer-max-width: none;
+  }
+
+  .menu-drawer .menu-drawer__menu-item--mainlist {
+    --menu-top-level-font-family: var(--font-heading--family);
+    --menu-top-level-font-style: var(--font-heading--style);
+    --menu-top-level-font-weight: var(--font-heading--weight);
+    --menu-top-level-font-case: none;
+    --menu-top-level-font-size: var(--font-h2--size);
+    --menu-top-level-font-line-height: var(--line-height-display);
   }
 {% endstylesheet %}

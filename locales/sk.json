@@ -89,6 +89,8 @@
     "show_submenu": "Zobraziť podponuku {{ title }}"
   },
   "actions": {
+    "pause": "Pozastaviť",
+    "play": "Prehrať",
     "add_to_cart": "Pridať do košíka",
     "clear_all": "Vymazať všetko",
     "remove": "Odstrániť",
@@ -158,6 +160,7 @@
     "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Dane, zľavy a <a href=\"{{ link }}\">doprava</a> sa vypočítajú pri platbe.",
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Dane, zľavy a doprava sa vypočítajú pri platbe.",
     "cart_title": "Košík",
+    "geneva": "Ženeva",
     "price": "Cena",
     "price_regular": "Normálna cena",
     "price_compare_at": "Porovnať podľa ceny",

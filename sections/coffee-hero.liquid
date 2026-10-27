@@ -1,0 +1,205 @@
+<div class="coffee-hero section section--page-width coffee-scheme--{{ section.settings.scheme }}">
+  <div class="coffee-hero__grid">
+    {%- if section.settings.side_label != blank -%}
+      {%- if section.settings.side_link != blank -%}
+        <a class="coffee-hero__side" href="{{ section.settings.side_link }}">{{ section.settings.side_label | escape }}</a>
+      {%- else -%}
+        <span class="coffee-hero__side">{{ section.settings.side_label | escape }}</span>
+      {%- endif -%}
+    {%- endif -%}
+
+    <div class="coffee-hero__text">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="coffee-hero__eyebrow coffee-hero__reveal">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      <h2 class="coffee-hero__title coffee-hero__reveal" style="--reveal-index: 1;">
+        {{- section.settings.heading -}}
+      </h2>
+    </div>
+
+    <div class="coffee-hero__media">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1600
+          | image_tag:
+            widths: '400, 600, 800, 1000, 1200, 1600',
+            sizes: '(min-width: 990px) 33vw, 100vw',
+            loading: 'eager',
+            fetchpriority: 'high',
+            class: 'coffee-hero__image'
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'coffee-hero__image coffee-hero__placeholder' }}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .coffee-hero {
+    padding-block: var(--section-padding-block);
+  }
+
+  .coffee-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-5);
+  }
+
+  .coffee-hero__side {
+    display: none;
+  }
+
+  .coffee-hero__eyebrow {
+    margin: 0 0 var(--space-4);
+    font-family: var(--font-body--family);
+    font-size: var(--font-size-label);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
+  }
+
+  .coffee-hero__title {
+    margin: 0;
+    font-family: var(--font-heading--family);
+    font-style: var(--font-heading--style);
+    font-weight: var(--font-heading--weight);
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+    text-wrap: balance;
+
+    em {
+      display: block;
+      font-family: var(--font-accent--family);
+      font-style: var(--font-accent--style);
+      color: var(--color-bordeaux);
+    }
+  }
+
+  :is(.coffee-scheme--bordeaux, .coffee-scheme--deep) .coffee-hero__title em {
+    color: inherit;
+  }
+
+  .coffee-hero__media {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: var(--radius-section);
+    background-color: var(--color-bordeaux-deep);
+  }
+
+  .coffee-hero__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .coffee-hero__placeholder {
+    fill: var(--color-sand);
+  }
+
+  @media screen and (min-width: 990px) {
+    .coffee-hero__grid {
+      grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+      column-gap: var(--grid-gutter);
+      align-items: end;
+    }
+
+    .coffee-hero__side {
+      display: block;
+      grid-column: 1;
+      align-self: stretch;
+      writing-mode: vertical-rl;
+      font-family: var(--font-body--family);
+      font-size: var(--font-size-label);
+      letter-spacing: var(--letter-spacing-wide);
+      text-transform: uppercase;
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--hover-duration);
+    }
+
+    a.coffee-hero__side:hover {
+      color: var(--color-primary-button-background);
+    }
+
+    .coffee-hero__text {
+      grid-column: 2 / 9;
+    }
+
+    .coffee-hero__media {
+      grid-column: 9 / -1;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .coffee-hero__reveal {
+      animation: coffee-hero-reveal var(--reveal-duration) var(--reveal-easing) both;
+      animation-delay: calc(var(--reveal-index, 0) * var(--reveal-stagger));
+    }
+  }
+
+  @keyframes coffee-hero-reveal {
+    from {
+      opacity: 0;
+      translate: 0 var(--reveal-distance);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Coffee hero",
+  "tag": "section",
+  "class": "coffee-hero-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "scheme",
+      "label": "Couleurs",
+      "options": [
+        { "value": "cream", "label": "Crème" },
+        { "value": "sand", "label": "Sable" },
+        { "value": "bordeaux", "label": "Bordeaux" },
+        { "value": "deep", "label": "Profond" }
+      ],
+      "default": "cream"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Référence",
+      "default": "Réf. CU-1204 — Specialty coffee × haute horlogerie"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Titre",
+      "info": "Le texte en italique passe à la ligne, en bordeaux.",
+      "default": "Sip slowly, <em>time will wait.</em>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Photo"
+    },
+    {
+      "type": "text",
+      "id": "side_label",
+      "label": "Texte vertical",
+      "default": "À propos"
+    },
+    {
+      "type": "url",
+      "id": "side_link",
+      "label": "Lien du texte vertical"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coffee hero"
+    }
+  ]
+}
+{% endschema %}

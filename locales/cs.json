@@ -89,6 +89,8 @@
     "show_submenu": "Zobrazit podnabídku {{ title }}"
   },
   "actions": {
+    "pause": "Pozastavit",
+    "play": "Přehrát",
     "add_to_cart": "Přidat do košíku",
     "clear_all": "Vymazat vše",
     "remove": "Odebrat",
@@ -159,6 +161,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Daně, slevy a cena dopravy se vypočítají na pokladně.",
     "checkout": "Zaplatit",
     "cart_title": "Košík",
+    "geneva": "Ženeva",
     "price": "Cena",
     "price_regular": "Běžná cena",
     "price_compare_at": "Původní cena",

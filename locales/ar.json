@@ -71,6 +71,8 @@
     }
   },
   "actions": {
+    "pause": "إيقاف مؤقت",
+    "play": "تشغيل",
     "add": "إضافة",
     "add_to_cart": "إضافة إلى سلة التسوق",
     "added": "تمت الإضافة",
@@ -172,6 +174,7 @@
     "blog_details_separator": "|",
     "cart_estimated_total": "الإجمالي التقديري",
     "cart_title": "سلة التسوق",
+    "geneva": "جنيف",
     "cart_subtotal": "الإجمالي الفرعي",
     "cart_total": "إجمالي سلة التسوق",
     "checkout": "إتمام الدفع",

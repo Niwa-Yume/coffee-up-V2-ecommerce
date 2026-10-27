@@ -67,6 +67,8 @@
     }
   },
   "actions": {
+    "pause": "روکیں",
+    "play": "چلائیں",
     "add": "شامل کریں",
     "add_to_cart": "کارٹ میں شامل کریں",
     "added": "شامل کر دیا گیا",
@@ -160,6 +162,7 @@
     "blog_details_separator": "|",
     "cart_estimated_total": "تخمینی کل رقم",
     "cart_title": "کارٹ",
+    "geneva": "جنیوا",
     "cart_subtotal": "سب ٹوٹل",
     "cart_total": "کارٹ کا ٹوٹل",
     "checkout": "چیک آؤٹ کریں",

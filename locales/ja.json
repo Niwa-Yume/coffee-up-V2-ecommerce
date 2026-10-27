@@ -87,6 +87,8 @@
     "show_submenu": "{{ title }} のサブメニューを表示"
   },
   "actions": {
+    "pause": "一時停止",
+    "play": "再生",
     "add_to_cart": "カートに追加",
     "clear_all": "すべてクリア",
     "remove": "削除",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "税、ディスカウント、および配送料はチェックアウト時に計算されます。",
     "checkout": "チェックアウト",
     "cart_title": "カート",
+    "geneva": "ジュネーブ",
     "price": "価格",
     "price_regular": "通常価格",
     "price_compare_at": "割引前価格",

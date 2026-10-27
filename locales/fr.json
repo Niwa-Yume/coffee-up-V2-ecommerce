@@ -88,6 +88,8 @@
     "view_disclosure_information_for_product": "Afficher les informations sur le produit {{ product_title }}"
   },
   "actions": {
+    "pause": "Pause",
+    "play": "Lecture",
     "add_to_cart": "Ajouter au panier",
     "clear_all": "Tout effacer",
     "remove": "Retirer",
@@ -156,6 +158,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, réductions et frais d’expédition calculés à l’étape du paiement.",
     "checkout": "Payer",
     "cart_title": "Panier",
+    "geneva": "Genève",
     "price": "Prix",
     "price_regular": "Prix régulier",
     "price_compare_at": "Prix avant réduction",

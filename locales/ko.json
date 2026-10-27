@@ -87,6 +87,8 @@
     "view_disclosure_information_for_product": "{{ product_title }}에 대한 고지 정보 보기"
   },
   "actions": {
+    "pause": "일시정지",
+    "play": "재생",
     "add_to_cart": "카트에 추가",
     "clear_all": "모두 지우기",
     "remove": "제거",
@@ -155,6 +157,7 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy": "결제 시 세금, 할인 및 배송료가 계산됩니다.",
     "checkout": "결제",
     "cart_title": "카트",
+    "geneva": "제네바",
     "price": "가격",
     "price_regular": "정가",
     "price_compare_at": "가격 비교",
