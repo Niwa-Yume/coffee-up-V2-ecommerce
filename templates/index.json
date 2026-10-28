@@ -6,14 +6,16 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "coffee_hero": {
       "type": "coffee-hero",
       "settings": {
         "scheme": "cream",
-        "eyebrow": "Réf. CU-1204 — Specialty coffee × haute horlogerie",
+        "eyebrow": "Specialty coffee × haute horlogerie",
         "heading": "Sip slowly, <em>time will wait.</em>",
+        "image": "shopify://shop_images/coffeeupmontre-1.png",
         "side_label": "À propos",
         "side_link": "shopify://pages/a-propos"
       }
@@ -25,6 +27,9 @@
           "type": "text",
           "settings": {
             "text": "<p><em>Sip slowly, time will wait</em></p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
             "font_size": "2.5rem",
@@ -32,8 +37,14 @@
             "letter_spacing": "tight",
             "case": "none",
             "wrap": "nowrap",
-            "width": "fit-content",
-            "text_color": "{{ settings.color_palette.color2 }}"
+            "text_color": "{{ settings.color_palette.color2 }}",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         },
@@ -41,6 +52,9 @@
           "type": "text",
           "settings": {
             "text": "<p>Genève — 46°12′N 6°09′E</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
             "font_size": "0.75rem",
@@ -48,8 +62,14 @@
             "letter_spacing": "loose",
             "case": "uppercase",
             "wrap": "nowrap",
-            "width": "fit-content",
-            "text_color": "{{ settings.color_palette.color2 }}"
+            "text_color": "{{ settings.color_palette.color2 }}",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         }
@@ -89,11 +109,13 @@
             "height": "fit",
             "custom_height": 100,
             "background_media": "none",
+            "background_color": "",
             "video_position": "cover",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
+            "border_color": "",
             "border_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -111,10 +133,12 @@
                 "alignment": "left",
                 "type_preset": "h6",
                 "font": "var(--font-body--family)",
+                "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
+                "text_color": "",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -132,6 +156,10 @@
                 "label": "Tout voir",
                 "open_in_new_tab": false,
                 "style_class": "button-unstyled",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
@@ -151,9 +179,11 @@
           "static": true,
           "settings": {
             "product_card_gap": 0,
+            "background_color": "",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
+            "border_color": "",
             "border_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -169,6 +199,7 @@
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
+                "border_color": "",
                 "border_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
